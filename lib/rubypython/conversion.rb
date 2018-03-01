@@ -1,5 +1,6 @@
 require 'rubypython/python'
 require 'rubypython/macros'
+require 'numru'
 
 # Acts as a namespace for methods to bidirectionally convert between native
 # Ruby types and native \Python types. Unsupported conversions raise
@@ -195,6 +196,8 @@ module RubyPython::Conversion
       rObj.pointer
     when RubyPython::RubyPyProxy
       rtopObject(rObj.pObject, is_key)
+    when NumRu
+      rtopObject(rObj.np_obj)
     else
       raise UnsupportedConversion.new("Unsupported type #{rObj.class} for conversion.")
     end
