@@ -35,7 +35,7 @@ module RubyPython::Operators
     end
   end
 
-  # Creates a method to delegate a relational operator. 
+  # Creates a method to delegate a relational operator.
   # These methods are implemented with calls the _operator_ module.
   # [rname] The name of the Ruby method for this operation. Can be a Symbol
   # or a String.
@@ -72,11 +72,11 @@ module RubyPython::Operators
   end
 
   [
-    [:==, 'eq'],
-    [:<, 'lt'],
-    [:<=, 'le'],
-    [:>, 'gt'],
-    [:>=, 'ge'],
+    [:==, '__eq__'],
+    [:<, '__lt__'],
+    [:<=, '__le__'],
+    [:>, '__gt__'],
+    [:>=, '__ge__'],
     [:equal?, 'is_']
   ].each do |args|
     rel_op *args
