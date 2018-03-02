@@ -31,7 +31,7 @@ module RubyPython::Operators
   # be delegated.
   def self.rel_op(rname, pname)
     define_method rname.to_sym do |other|
-      RubyPython::Operators.operator_.__send__(pname, self, other).rubify
+      RubyPython::Operators.operator_.__send__(pname, self, other)
     end
   end
 

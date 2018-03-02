@@ -28,7 +28,7 @@ module RubyPython
   #     sys.version { |v| v.rubify.split(' ') }
   #   end
   #   # => [ "2.6.1", … ]
-  #   
+  #
   # == Passing Procs and Methods to \Python Methods
   # RubyPython supports passing Proc and Method objects to \Python methods.
   # The Proc or Method object must be passed explicitly. As seen above,
